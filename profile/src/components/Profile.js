@@ -22,14 +22,14 @@ export default () => {
         <br />
         <p className="loginBio">{profileData.bio}</p>
         <button className="editProfile">Edit Profile</button>
-        <p className="belowEdit">{profileData.company}</p>
-        <p className="belowEdit">{profileData.location}</p>
+        <p className="belowEdit">&#xf126; {profileData.company}</p>
+        <p className="belowEdit">&#xf126; {profileData.location}</p>
         <p className="belowEdit">
           {profileData.email == null
-            ? "lanceamolo808@yahoo.com"
+            ? `lanceamolo808@yahoo.com`
             : profileData.email}
         </p>
-        <p className="belowEdit">{profileData.html_url}</p>
+        <p className="belowEdit">&#xf126; {profileData.html_url}</p>
       </div>
       <div className="col2">
         <ul>
