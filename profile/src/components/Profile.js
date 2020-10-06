@@ -15,41 +15,54 @@ export default () => {
     <div className="container1">
       {console.log(profileData)}
       {console.log(repoData)}
-      <div className="col1">
-        <img className="profilePic" src={profileData.avatar_url}></img>
-        <h2>{profileData.name}</h2>
-        <p>{profileData.login}</p>
-        <br />
-        <p className="loginBio">{profileData.bio}</p>
-        <button className="editProfile">Edit Profile</button>
-        <p className="belowEdit">&#xf126; {profileData.company}</p>
-        <p className="belowEdit">&#xf126; {profileData.location}</p>
-        <p className="belowEdit">
-          {profileData.email == null
-            ? `lanceamolo808@yahoo.com`
-            : profileData.email}
-        </p>
-        <p className="belowEdit">&#xf126; {profileData.html_url}</p>
+      <div className="row1">
+        <div className="header">
+          <p>Overview</p>
+          <span>
+            <li className="publicRepos">{profileData.public_repos}</li>
+          </span>
+          <p>Repositories</p>
+          <p className="projects">Projects</p>
+          <p>Packages</p>
+        </div>
       </div>
-      <div className="col2">
-        <ul>
-          {repoData.map((item) => (
-            <li className="repoCards">
-              <div className="leftSideRepo">
-                <h5 className="repoName">{item.name}</h5>
-                <p className="forkURL">Forked from {item.forks_url}</p>
-                <div className="thirdRowRepo">
-                  <p>{item.language}</p>
-                  <p>&#xf126; {item.forks_count}</p>
-                  <p>Updated {item.updated_at}</p>
+      <div className="row2">
+        <div className="col1">
+          <img className="profilePic" src={profileData.avatar_url}></img>
+          <h2>{profileData.name}</h2>
+          <p>{profileData.login}</p>
+          <br />
+          <p className="loginBio">{profileData.bio}</p>
+          <button className="editProfile">Edit Profile</button>
+          <p className="belowEdit">&#xf126; {profileData.company}</p>
+          <p className="belowEdit">&#xf126; {profileData.location}</p>
+          <p className="belowEdit">
+            {profileData.email == null
+              ? `lanceamolo808@yahoo.com`
+              : profileData.email}
+          </p>
+          <p className="belowEdit">&#xf126; {profileData.html_url}</p>
+        </div>
+        <div className="col2">
+          <ul>
+            {repoData.map((item) => (
+              <li className="repoCards">
+                <div className="leftSideRepo">
+                  <h5 className="repoName">{item.name}</h5>
+                  <p className="forkURL">Forked from {item.forks_url}</p>
+                  <div className="thirdRowRepo">
+                    <p>{item.language}</p>
+                    <p>&#xf126; {item.forks_count}</p>
+                    <p>Updated {item.updated_at}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="rightSideRepo">
-                <button className="">&#9734; Star</button>
-              </div>
-            </li>
-          ))}
-        </ul>
+                <div className="rightSideRepo">
+                  <button className="">&#9734; Star</button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   )

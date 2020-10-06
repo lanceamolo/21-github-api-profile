@@ -12,9 +12,47 @@ li {
   display: grid;
   width: 1425px;
   height: 100%;
-  grid-template-columns: 325px 940px;
   position: relative;
   top: 50px;
+  grid-template-rows: 50px auto;
+}
+
+.row1 {
+  grid-row: 1;
+}
+
+.header {
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+  justify-content: center;
+  position: relative;
+  top: 35px;
+}
+
+.header p {
+  position: relative;
+  margin-right: 60px;
+}
+
+.projects {
+  margin-left: 40px;
+}
+
+.publicRepos {
+  position: relative;
+  left: 110px;
+  background: lightgrey;
+  text-align: center;
+  width: 25px;
+  height: 17px;
+  border-radius: 10px;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 325px 940px;
+  grid-row: 2;
+  position: relative;
   left: 85px;
 }
 
@@ -57,6 +95,8 @@ li {
   grid-column: 2;
   border-bottom: 1px solid black;
   margin: 0 20px;
+  position: relative;
+  top: 40px;
 }
 
 .repoCards {
